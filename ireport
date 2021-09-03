@@ -1,0 +1,7 @@
+// ireport mostrar por gráfico todos los vehiculos más antiguos que posee la empresa
+select 
+camion.fecha_ingreso as fecha_Camion,
+camion.marca as Marca
+
+from camion
+order by fecha_Camion asc
