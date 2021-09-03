@@ -1,0 +1,132 @@
+/*Inserción de clientes*/
+select *from  cliente
+insert into cliente (cliente_id, nombre, cedula, apellido, fecha_nacimiento,estado_civil, genero, telefono_trabajo, telefono_domicilio, correo) values (1, 'Padraic', '1314578451', 'Arnault', '7/11/1999','viuda', 'Female', '09887845', '09856412', 'parnault0@rambler.ru');
+insert into cliente (cliente_id, nombre, cedula, apellido, fecha_nacimiento,estado_civil, genero, telefono_trabajo, telefono_domicilio, correo) values (2, 'Ingaborg', '1301254658', 'Gerner', '13/12/2000','divorciada', 'Female', '43023637', '54227900', 'igerner1@barnesandnoble.com');
+insert into cliente (cliente_id, nombre, cedula, apellido, fecha_nacimiento,estado_civil, genero, telefono_trabajo, telefono_domicilio, correo) values (3, 'Archie', '1354210541', 'Massel', '14/11/1999','soltero', 'Male', '68936962', '69091701', 'amassel2@plala.or.jp');
+insert into cliente (cliente_id, nombre, cedula, apellido, fecha_nacimiento,estado_civil, genero, telefono_trabajo, telefono_domicilio, correo) values (4, 'Oliviero', '1312546987', 'Davitti', '30/1/2001','casado', 'Male', '75615954', '67176040', 'odavitti3@hugedomains.com');
+insert into cliente (cliente_id, nombre, cedula, apellido, fecha_nacimiento,estado_civil, genero, telefono_trabajo, telefono_domicilio, correo) values (5, 'Leland', '1310264598', 'Bechley', '12/10/1999','casada', 'Female', '47436050', '43012441', 'lbechley4@skype.com');
+insert into cliente (cliente_id, nombre, cedula, apellido, fecha_nacimiento,estado_civil, genero, telefono_trabajo, telefono_domicilio, correo) values (6, 'Judon', '1321456987', 'Strathern', '2/9/2001','soltera', 'Female', '87379929', '16272096', 'jstrathern5@sogou.com');
+insert into cliente (cliente_id, nombre, cedula, apellido, fecha_nacimiento,estado_civil, genero, telefono_trabajo, telefono_domicilio, correo) values (7, 'Bobinette', '1301654789', 'Garmston', '29/4/2001','divorciado', 'Male', '54936448', '11112772', 'bgarmston6@google.ca');
+insert into cliente (cliente_id, nombre, cedula, apellido, fecha_nacimiento,estado_civil, genero, telefono_trabajo, telefono_domicilio, correo) values (8, 'Kelley', '1302456987', 'Willatts', '18/1/2001','soltera', 'Female', '62870441', '10966217', 'kwillatts7@cornell.edu');
+insert into cliente (cliente_id, nombre, cedula, apellido, fecha_nacimiento,estado_civil, genero, telefono_trabajo, telefono_domicilio, correo) values (9, 'Mufi', '1314596874', 'Monkley', '30/4/1999','casado', 'Male', '22511980', '77258628', 'mmonkley8@usatoday.com');
+insert into cliente (cliente_id, nombre, cedula, apellido, fecha_nacimiento,estado_civil, genero, telefono_trabajo, telefono_domicilio, correo) values (10, 'Timoteo', '1314659874', 'Kelberman', '8/4/1998','casada', 'Female', '99341770', '73367416', 'tkelberman9@dmoz.org');
+
+/*Inserción de choferes*/
+select *from chofer
+insert into chofer (chofer_id, nombre, apellido, fecha_nacimineto,estado_civil, genero, telefono_trabajo, telefono_domicilio, correo,tipo_licencia) values (1, 'Zedekiah', 'Starbeck', '15/10/2000','soltero', 'Male', '94137320', '68331202', 'zstarbeck0@state.tx.us','Tipo E');
+insert into chofer (chofer_id, nombre, apellido, fecha_nacimineto,estado_civil, genero, telefono_trabajo, telefono_domicilio, correo,tipo_licencia) values (2, 'Edgard', 'Hourstan', '5/7/1999','casado', 'Male', '64324983', '59046775', 'ehourstan1@yelp.com','Profesional');
+insert into chofer (chofer_id, nombre, apellido, fecha_nacimineto,estado_civil, genero, telefono_trabajo, telefono_domicilio, correo,tipo_licencia) values (3, 'Rafe', 'Edbrooke', '27/2/1999','soltero', 'Male', '89556720', '90641183', 'redbrooke2@ibm.com','Profesional');
+insert into chofer (chofer_id, nombre, apellido, fecha_nacimineto,estado_civil, genero, telefono_trabajo, telefono_domicilio, correo,tipo_licencia) values (4, 'Demetrius', 'Digger', '1/7/2000','casado', 'Male', '73649459', '57389844', 'ddigger3@aboutads.info','Tipo E');
+insert into chofer (chofer_id, nombre, apellido, fecha_nacimineto,estado_civil, genero, telefono_trabajo, telefono_domicilio, correo,tipo_licencia) values (5, 'Jenilee', 'Macvey', '7/6/2001','casado', 'Male', '98287368', '62111508', 'jmacvey4@buzzfeed.com','Tipo E');
+
+/*Inserción de tipo de camion*/
+select *from tipo_camion
+insert into tipo_camion(tipo_camion_id, camion_descripcion) values ('1','Propio');
+insert into tipo_camion(tipo_camion_id, camion_descripcion) values ('2','Alquilado');
+
+/*Empresa*/
+select *from empresa
+insert into empresa(empresa_num, mudanza) values ('1','Mudanza');
+
+/*Inserción de camiones*/
+delete from camion
+select *from camion
+insert into camion(camion_id, chofer_id,empresa_num, tipo_camion_id, fecha_ingreso, marca,placa,num_registro) values ('1','1','1','1','15/4/2005','Volvo','MBD-123','158');
+insert into camion(camion_id, chofer_id,empresa_num, tipo_camion_id, fecha_ingreso, marca,placa,num_registro) values ('2','2','1','2','14/6/2006','Mercedes','MBD-321','1');
+insert into camion(camion_id, chofer_id,empresa_num, tipo_camion_id, fecha_ingreso, marca,placa,num_registro) values ('3','3','1','1','10/1/2007','Hino','MBD-178','47');
+insert into camion(camion_id, chofer_id,empresa_num, tipo_camion_id, fecha_ingreso, marca,placa,num_registro) values ('4','4','1','2','1/12/2011','Dahiatsun','MBD-789','41');
+insert into camion(camion_id, chofer_id,empresa_num, tipo_camion_id, fecha_ingreso, marca,placa,num_registro) values ('5','5','1','1','25/8/215','Scania','MBD-852','40');
+
+/*Tipo mudanza*/
+select *from tipo_mudanza
+insert into tipo_mudanza(tipo_mudanza_id, tipo_mudanza_nombre) values ('1','domesticas');
+insert into tipo_mudanza(tipo_mudanza_id, tipo_mudanza_nombre) values ('2','interpovinciales');
+
+/*calificación mudanza*/
+select *from calificacio_mudanza
+insert into calificacio_mudanza(calificaion_id, calificacion_nombre) values ('1','Excelente');
+insert into calificacio_mudanza(calificaion_id, calificacion_nombre) values ('2','Buena');
+insert into calificacio_mudanza(calificaion_id, calificacion_nombre) values ('3','Mala');
+
+/*Inserción de direcciones*/
+select *from direccion
+insert into direccion (direccion_id, cliente_id, direccion_alias, direccion_descripcion, direccion_calle_, dreccion_codigopostal, direccion_ciudad) values (1, 1,'Barrio las peñas','Manta barrio las peñas','calle 13','12110','Manta');
+insert into direccion (direccion_id, cliente_id, direccion_alias, direccion_descripcion, direccion_calle_, dreccion_codigopostal, direccion_ciudad) values (2, 2,'20 de Mayo','20 de Mayo casa azul','calle 18','18200','Manta');
+insert into direccion (direccion_id, cliente_id, direccion_alias, direccion_descripcion, direccion_calle_, dreccion_codigopostal, direccion_ciudad) values (3, 3,'Barrio fino','barrio fino pechiche','calle Rodrigo','10052','Montecristi');
+insert into direccion (direccion_id, cliente_id, direccion_alias, direccion_descripcion, direccion_calle_, dreccion_codigopostal, direccion_ciudad) values (4, 4,'Rumiñahui','rumiñauhi tercer casa','calle 8','1200','Quito');
+insert into direccion (direccion_id, cliente_id, direccion_alias, direccion_descripcion, direccion_calle_, dreccion_codigopostal, direccion_ciudad) values (5, 5,'Barrio las peñas','Manta barrio las peñas','calle 13','12110','Manta');
+insert into direccion (direccion_id, cliente_id, direccion_alias, direccion_descripcion, direccion_calle_, dreccion_codigopostal, direccion_ciudad) values (6, 6,'Barrio las peñas','Manta barrio las peñas','calle 13','12110','Manta');
+insert into direccion (direccion_id, cliente_id, direccion_alias, direccion_descripcion, direccion_calle_, dreccion_codigopostal, direccion_ciudad) values (7, 7,'20 de Mayo','20 de Mayo casa azul','calle 18','18200','Manta');
+insert into direccion (direccion_id, cliente_id, direccion_alias, direccion_descripcion, direccion_calle_, dreccion_codigopostal, direccion_ciudad) values (8, 8,'20 de Mayo','20 de Mayo casa azul','calle 18','18200','Manta');
+insert into direccion (direccion_id, cliente_id, direccion_alias, direccion_descripcion, direccion_calle_, dreccion_codigopostal, direccion_ciudad) values (9, 9,'20 de Mayo','20 de Mayo casa azul','calle 18','18200','Manta');
+insert into direccion (direccion_id, cliente_id, direccion_alias, direccion_descripcion, direccion_calle_, dreccion_codigopostal, direccion_ciudad) values (10, 10,'20 de Mayo','20 de Mayo casa azul','calle 18','18200','Manta');
+
+/*Inserción de mudanza*/
+select *from mudanzas
+insert into mudanzas (mudanza_id, chofer_id,cliente_id, tipo_mudanza_id, calificaion_id,fecha_registro, fecha_entrega) values (1,1,1,1,1, '24/8/2020', '29/9/2020');
+insert into mudanzas (mudanza_id, chofer_id,cliente_id, tipo_mudanza_id, calificaion_id,fecha_registro, fecha_entrega) values (2,2,2,1,1, '3/3/2021', '10/5/2021');
+insert into mudanzas (mudanza_id, chofer_id,cliente_id, tipo_mudanza_id, calificaion_id,fecha_registro, fecha_entrega) values (3,3,3,1,1, '3/5/2020', '2/6/2020');
+insert into mudanzas (mudanza_id, chofer_id,cliente_id, tipo_mudanza_id, calificaion_id,fecha_registro, fecha_entrega) values (4,4,4,1,1, '26/5/2021', '6/6/2021');
+insert into mudanzas (mudanza_id, chofer_id,cliente_id, tipo_mudanza_id, calificaion_id,fecha_registro, fecha_entrega) values (5,5,5,1,1, '14/11/2020', '11/12/2020');
+insert into mudanzas (mudanza_id, chofer_id,cliente_id, tipo_mudanza_id, calificaion_id,fecha_registro, fecha_entrega) values (6,1,6,1,2, '9/8/2020', '3/9/2020');
+insert into mudanzas (mudanza_id, chofer_id,cliente_id, tipo_mudanza_id, calificaion_id,fecha_registro, fecha_entrega) values (7,2,7,1,2, '22/2/2021', '8/3/2021');
+insert into mudanzas (mudanza_id, chofer_id,cliente_id, tipo_mudanza_id, calificaion_id,fecha_registro, fecha_entrega) values (8,3,8,1,2, '14/3/2020', '5/4/2020');
+insert into mudanzas (mudanza_id, chofer_id,cliente_id, tipo_mudanza_id, calificaion_id,fecha_registro, fecha_entrega) values (9,4,9,1,2, '4/8/2020', '2/9/2020');
+insert into mudanzas (mudanza_id, chofer_id,cliente_id, tipo_mudanza_id, calificaion_id,fecha_registro, fecha_entrega) values (10,5,10,1,2, '23/3/2021', '12/4/2021');
+insert into mudanzas (mudanza_id, chofer_id,cliente_id, tipo_mudanza_id, calificaion_id,fecha_registro, fecha_entrega) values (11,1,1,2,3, '30/1/2020', '3/2/2020');
+insert into mudanzas (mudanza_id, chofer_id,cliente_id, tipo_mudanza_id, calificaion_id,fecha_registro, fecha_entrega) values (12,2,2,1,3, '24/3/2021', '11/4/2021');
+insert into mudanzas (mudanza_id, chofer_id,cliente_id, tipo_mudanza_id, calificaion_id,fecha_registro, fecha_entrega) values (13,3,3,1,1, '26/6/2020', '4/7/2020');
+insert into mudanzas (mudanza_id, chofer_id,cliente_id, tipo_mudanza_id, calificaion_id,fecha_registro, fecha_entrega) values (14,4,4,1,1, '5/11/2019', '3/12/2019');
+insert into mudanzas (mudanza_id, chofer_id,cliente_id, tipo_mudanza_id, calificaion_id,fecha_registro, fecha_entrega) values (15,5,5,1,1, '26/12/2019', '30/12/2029');
+insert into mudanzas (mudanza_id, chofer_id,cliente_id, tipo_mudanza_id, calificaion_id,fecha_registro, fecha_entrega) values (16,1,6,2,3, '28/8/2020', '4/9/2020');
+insert into mudanzas (mudanza_id, chofer_id,cliente_id, tipo_mudanza_id, calificaion_id,fecha_registro, fecha_entrega) values (17,2,7,1,3, '20/11/2020', '3/12/2020');
+insert into mudanzas (mudanza_id, chofer_id,cliente_id, tipo_mudanza_id, calificaion_id,fecha_registro, fecha_entrega) values (18,3,8,1,1, '27/8/2020', '5/9/2020');
+insert into mudanzas (mudanza_id, chofer_id,cliente_id, tipo_mudanza_id, calificaion_id,fecha_registro, fecha_entrega) values (19,4,9,1,2, '17/9/2020', '2/10/2020');
+insert into mudanzas (mudanza_id, chofer_id,cliente_id, tipo_mudanza_id, calificaion_id,fecha_registro, fecha_entrega) values (20,5,10,2,2, '10/3/2020', '3/4/2020');
+
+/*inserciones de detalle_factura*/
+select *from detalle_factura
+insert into detalle_factura ( detalle_factu_id, det_mudanza, det_camion_al, det_precio) values (1,'50','50','90');
+insert into detalle_factura ( detalle_factu_id, det_mudanza, det_camion_al, det_precio) values (2,'75','40','80');
+insert into detalle_factura ( detalle_factu_id, det_mudanza, det_camion_al, det_precio) values (3,'60','70','70');
+insert into detalle_factura ( detalle_factu_id, det_mudanza, det_camion_al, det_precio) values (4,'55','60','90');
+insert into detalle_factura ( detalle_factu_id, det_mudanza, det_camion_al, det_precio) values (5,'80','50','70');
+insert into detalle_factura ( detalle_factu_id, det_mudanza, det_camion_al, det_precio) values (6,'100','70','60');
+insert into detalle_factura ( detalle_factu_id, det_mudanza, det_camion_al, det_precio) values (7,'30','40','70');
+insert into detalle_factura ( detalle_factu_id, det_mudanza, det_camion_al, det_precio) values (8,'60','20','50');
+insert into detalle_factura ( detalle_factu_id, det_mudanza, det_camion_al, det_precio) values (9,'40','50','90');
+insert into detalle_factura ( detalle_factu_id, det_mudanza, det_camion_al, det_precio) values (10,'70','70','70');
+insert into detalle_factura ( detalle_factu_id, det_mudanza, det_camion_al, det_precio) values (11,'80','40','40');
+insert into detalle_factura ( detalle_factu_id, det_mudanza, det_camion_al, det_precio) values (12,'60','50','80');
+insert into detalle_factura ( detalle_factu_id, det_mudanza, det_camion_al, det_precio) values (13,'20','70','70');
+insert into detalle_factura ( detalle_factu_id, det_mudanza, det_camion_al, det_precio) values (14,'80','50','90');
+insert into detalle_factura ( detalle_factu_id, det_mudanza, det_camion_al, det_precio) values (15,'40','40','60');
+insert into detalle_factura ( detalle_factu_id, det_mudanza, det_camion_al, det_precio) values (16,'90','80','70');
+insert into detalle_factura ( detalle_factu_id, det_mudanza, det_camion_al, det_precio) values (17,'60','60','70');
+insert into detalle_factura ( detalle_factu_id, det_mudanza, det_camion_al, det_precio) values (18,'50','90','80');
+insert into detalle_factura ( detalle_factu_id, det_mudanza, det_camion_al, det_precio) values (19,'50','80','60');
+insert into detalle_factura ( detalle_factu_id, det_mudanza, det_camion_al, det_precio) values (20,'50','40','70');
+
+/*inserciones de factura*/
+select *from factura
+insert into factura (factura_id, cliente_id, detalle_factu_id, factura_fecha) values (1,1,1,'12/6/2020');
+insert into factura (factura_id, cliente_id, detalle_factu_id, factura_fecha) values (2,1,2,'18/3/2020');
+insert into factura (factura_id, cliente_id, detalle_factu_id, factura_fecha) values (3,1,3,'17/4/2020');
+insert into factura (factura_id, cliente_id, detalle_factu_id, factura_fecha) values (4,2,4,'1/2/2020');
+insert into factura (factura_id, cliente_id, detalle_factu_id, factura_fecha) values (5,2,5,'12/7/2020');
+insert into factura (factura_id, cliente_id, detalle_factu_id, factura_fecha) values (6,3,6,'11/8/2020');
+insert into factura (factura_id, cliente_id, detalle_factu_id, factura_fecha) values (7,3,7,'10/6/2020');
+insert into factura (factura_id, cliente_id, detalle_factu_id, factura_fecha) values (8,3,8,'8/3/2020');
+insert into factura (factura_id, cliente_id, detalle_factu_id, factura_fecha) values (9,3,9,'1/7/2020');
+insert into factura (factura_id, cliente_id, detalle_factu_id, factura_fecha) values (10,4,10,'2/4/2020');
+insert into factura (factura_id, cliente_id, detalle_factu_id, factura_fecha) values (11,4,11,'1/5/2021');
+insert into factura (factura_id, cliente_id, detalle_factu_id, factura_fecha) values (12,4,12,'2/6/2021');
+insert into factura (factura_id, cliente_id, detalle_factu_id, factura_fecha) values (13,4,13,'8/7/2021');
+insert into factura (factura_id, cliente_id, detalle_factu_id, factura_fecha) values (14,4,14,'9/8/2021');
+insert into factura (factura_id, cliente_id, detalle_factu_id, factura_fecha) values (15,1,15,'7/9/2021');
+insert into factura (factura_id, cliente_id, detalle_factu_id, factura_fecha) values (16,1,16,'2/6/2021');
+insert into factura (factura_id, cliente_id, detalle_factu_id, factura_fecha) values (17,1,17,'12/7/2021');
+insert into factura (factura_id, cliente_id, detalle_factu_id, factura_fecha) values (18,1,18,'10/8/2021');
+insert into factura (factura_id, cliente_id, detalle_factu_id, factura_fecha) values (19,3,19,'11/9/2021');
+insert into factura (factura_id, cliente_id, detalle_factu_id, factura_fecha) values (20,3,20,'2/5/2021');
+
