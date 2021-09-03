@@ -1,0 +1,16 @@
+
+//procedimiento almacenado, que al ingresar un camion muestre las mudanzas que ha realizado
+create or replace function obtener_estado_mudanza(
+	IN marca_camion varchar,
+	out total_mudanzas varchar
+)
+as  $$
+BEGIN
+	select sum(mudanzas.mudanza_id) into total_mudanzas
+		from mudanzas
+		inner join camion on camion.camion_id = mudanzas.mudanza_id
+		where marca_camion=marca;
+end 
+$$
+language plpgsql;
+select *from obtener_estado_mudanza('')
