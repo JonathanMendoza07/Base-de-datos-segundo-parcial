@@ -1,0 +1,19 @@
+//cursor que muestre los choferes, mudanzas que ha realizado y dinero generado por las mudanzas
+do $$
+declare
+registro mudanzas;
+mudanzas_calculos cursor for select 
+chofer.nombre as nombreChofer,
+count(mudanzas.mudanza_id) as mudanzasRealizadas,
+sum(factura.precio_total) as dineroGenerado
+from mudanzas
+inner join chofer on chofer.chofer_id = mudanzas.chofer_id
+inner join factura on factura.mudanza_id =mudanzas.mudanza_id
+group by chofer.nombre;
+begin 
+	for registro in mudanzas_calculos loop
+		Raise notice 'Chofer: %, Mudanzas realizadas: %, Dinero generado: %',
+		registro.nombreChofer, registro.mudanzasRealizadas, registro.dineroGenerado;
+	end loop;
+end $$
+language 'plpgsql';
